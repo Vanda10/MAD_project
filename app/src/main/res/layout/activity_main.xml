@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <androidx.appcompat.widget.LinearLayoutCompat
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -35,6 +34,7 @@
                     android:id="@+id/userName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="SokSao"
                     android:textStyle="bold"
                     android:padding="10dp" />
 
@@ -84,6 +84,7 @@
 
             <!-- Cover Image -->
             <ImageView
+                android:src="@drawable/cover"
                 android:id="@+id/coverImage"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
@@ -95,18 +96,13 @@
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="-140dp"
-                android:layout_marginLeft="-120dp"/>
+                android:layout_marginLeft="-120dp"
+                android:layout_marginTop="-80dp"
+                android:src="@drawable/profile" />
 
-            <!-- Name -->
-            <TextView
-                android:id="@+id/userName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="-120dp"/>
 
         </LinearLayout>
+
 
         <!--    user hobby info-->
         <LinearLayout
@@ -120,6 +116,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
+                android:text="SokSao"
                 android:textStyle="bold"/>
 
             <TextView
@@ -130,7 +127,8 @@
             <TextView
                 android:id="@+id/bio"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="Love travelling"/>
 
 
         </LinearLayout>
@@ -148,9 +146,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@color/blue"
-                android:drawableStart="@drawable/ic_down_foreground"
+                android:drawableStart="@drawable/ic_edit_foreground"
                 android:drawablePadding="8dp"
-                android:text="Add to story"
+                android:text="Add to Story"
+                app:backgroundTint="@color/blue"
                 android:textColor="@color/white"
                 android:padding="8dp"/>
 
@@ -169,6 +168,7 @@
                 android:drawableStart="@drawable/ic_edit_foreground"
                 android:drawablePadding="8dp"
                 android:text="Edit Profile"
+                app:backgroundTint="@color/blue"
                 android:textColor="@color/white"
                 android:padding="8dp"/>
 
@@ -210,7 +210,7 @@
                     android:layout_height="match_parent"
                     android:padding="10dp"
                     android:textStyle="bold"
-                    android:text="Single"/>
+                    android:text="Student at Royal University of Phnom Penh"/>
             </LinearLayout>
 
             <LinearLayout
@@ -231,26 +231,44 @@
                     android:text="Single"/>
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_threedots_foreground"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:text="See your About info"/>
+            </LinearLayout>
+
 
         </LinearLayout>
 
-
-    <!--    button edit public profile -->
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
-            android:background="@color/gray"
-            app:cardCornerRadius="10dp">
+            app:cardBackgroundColor="@color/gray"
+            app:cardCornerRadius="5dp">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:text="Edit Public details"
-                android:textAlignment="center" />
-
+                android:textColor="@color/lightblue"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:gravity="center" />
         </androidx.cardview.widget.CardView>
 
 
